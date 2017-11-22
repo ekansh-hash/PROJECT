@@ -3,8 +3,8 @@
 using namespace std;
 struct look
 {
-    int length;
-    bool isFilled;
+    int length=0;
+    bool isFilled=false;
 };
 int main()
 {
@@ -12,7 +12,7 @@ int main()
  int maxm=0;
  int counter=0;
  int number=1;
- for (int i=1;i<1000000;i++)
+ for (int i=1;i<100000;i++)
 {
     arr[i]=new look;
 }
@@ -53,6 +53,8 @@ for (int j=1;j<1000000;j++)
             maxm=counter;
             number=j;
         }
+        arr[j]->isFilled=true;
+        arr[j]->length=counter;
     }
 }
 
